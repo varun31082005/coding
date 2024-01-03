@@ -77,7 +77,7 @@ In the given question, there are two sequences.
 63, 65, 67....\label{eq:1}\\
 3, 10, 17....\label{eq:2}
 \end{align}
-for the sequence \eqref{eq:1}, let x(n) be $ nth$ term,
+for the sequence $ \eqref{eq:1}$, let x(n) be $ nth$ term,
 \begin{align}
 \notag a = 63\\
 \notag a+d = 65\\
@@ -85,7 +85,7 @@ for the sequence \eqref{eq:1}, let x(n) be $ nth$ term,
 \notag \text{x(n)} = 63 + (n-1)\times2\\
 \text{x(n)} = 61 + 2n \label{eq:3}
 \end{align}
-for sequence \eqref{eq:2} , let y(n) be $ nth$ term,
+for sequence $ \eqref{eq:2}$ , let y(n) be $ nth$ term,
 \begin{align}
 \notag a = 3 \\
 \notag a+d = 10\\
@@ -109,9 +109,8 @@ To find X(z) and Y(z)(i.e. the 'z' transforms):\\
 \text{and Y(z)} = \sum_{n=-\infty}^{\infty} y(n)\times \text{z}^{-n}\\
 \notag \text{i.e. X(z)} = \sum_{n=1}^{\infty} (61 + 2n)\times \text{z}^{-n}\\
 \notag \text{when $ |\text{z}|>1$ this can be resolved to:}\\
-\text{X(z)} = \frac{61}{\text{z}-1} + \frac{2(2\text{z}-1)}{(\text{z}-1)^2}\\
+\text{X(z)} = 61(\text{z}-1)^{-1} + 2(2\text{z}-1)(\text{z}-1)^{-2}\\
 \notag \text{and Y(z)} = \sum_{n=1}^{\infty} (-4 + 7n)\times \text{z}^{-n}\\
 \notag \text{when $ |\text{z}|>1$ this can be resolved to:}\\
-\text{Y(z)} = \frac{-4}{\text{z}-1} + \frac{7(2\text{z}-1)}{(\text{z}-1)^2}
-\end{align}
+\text{Y(z)} = -4(\text{z}-1)^{-1} + 7(2\text{z}-1)(\text{z}-1)^{-2}\end{align}
 \end{document}
