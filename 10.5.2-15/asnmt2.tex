@@ -61,6 +61,7 @@ For what value of $ n$, are the $ nth$ terms of two A.Ps: 63, 65, 67,... and 3, 
 \vspace{0.5cm}
 \textbf{Solution}:
 
+\textbf{part-(i)}
 A sequence is said to be in Arithmetic Progression when it is in the form of
 \begin{align}
 \notag a, a+d, a+2d, a+3d,....
@@ -103,13 +104,41 @@ n = 13\\
 \end{align}
 $ \therefore$ 13th terms of given two APs are equal.\\\\
 \vspace{0.5cm}
-To find X(z) and Y(z)(i.e. the 'z' transforms):\\
+\textbf{part-(ii)}
+To find X(z) and Y(z) (i.e. the 'z' transforms):\\
 \begin{align}
-\text{X(z)} = \sum_{n=-\infty}^{\infty} x(n)\times \text{z}^{-n}\\
-\text{and Y(z)} = \sum_{n=-\infty}^{\infty} y(n)\times \text{z}^{-n}\\
-\notag \text{i.e. X(z)} = \sum_{n=1}^{\infty} (61 + 2n)\times \text{z}^{-n}\\
-\text{X(z)} = 61(\text{z}-1)^{-1} + 2(2\text{z}-1)(\text{z}-1)^{-2}  \forall  |\text{z}|>1\\
-\notag \text{and Y(z)} = \sum_{n=1}^{\infty} (-4 + 7n)\times \text{z}^{-n}\\
-\text{Y(z)} = -4(\text{z}-1)^{-1} + 7(2\text{z}-1)(\text{z}-1)^{-2} \forall  |\text{z}|>1
+\text{X(z)} = \sum_{n=-\infty}^{\infty} x(n)\times \text{z}^{-n}
+\end{align}
+\begin{align}
+\text{and Y(z)} = \sum_{n=-\infty}^{\infty} y(n)\times \text{z}^{-n}
+\end{align}
+\begin{align}
+\notag \text{i.e. X(z)} = \sum_{n=1}^{\infty} (61 + 2n)\times \text{z}^{-n}
+\end{align}
+\begin{align}
+\notag \text{X(z)} = \sum_{n=1}^{\infty}(61\times \text{z}^{-n}) + \sum_{n=1}^{\infty}(2n\times \text{z}^{-n})
+\end{align}
+\begin{align}
+\notag \text{X(z)} = \sum_{n=1}^{\infty}(61\times \text{z}^{-n}) + \sum_{n=1}^{\infty}(2n\times \text{z}^{-n})
+\end{align}
+\begin{align}
+\notag \text{X(z)} = \lim_{n\to\infty} [61\times(1-z^{-n})(z-1)^{-1}+ 2(z-1)^{-1}\\
++ 2(z^{n-1}-1)(z^{1-n})(z-1)^{-1}-2[(n-1)z+1]z^{n-1}]
+\end{align}
+\begin{align}
+\boxed{\text{X(z)} = 61(\text{z}-1)^{-1} + 2(2\text{z}-1)(\text{z}-1)^{-2}  \forall  |\text{z}|>1}
+\end{align}
+\begin{align}
+\notag \text{and Y(z)} = \sum_{n=1}^{\infty} (-4 + 7n)\times \text{z}^{-n}
+\end{align}
+\begin{align}
+\notag \text{Y(z)} = \sum_{n=1}^{\infty}(-4\times \text{z}^{-n}) + \sum_{n=1}^{\infty}(7n\times \text{z}^{-n})
+\end{align}
+\begin{align}
+\notag \text{Y(z)} = \lim_{n\to\infty} [-4\times(1-z^{-n})(z-1)^{-1}+ 7(z-1)^{-1}\\
++ 7(z^{n-1}-1)(z^{1-n})(z-1)^{-1}-7[(n-1)z+1]z^{n-1}]
+\end{align}
+\begin{align}
+\boxed{\text{Y(z)} = -4(\text{z}-1)^{-1} + 7(2\text{z}-1)(\text{z}-1)^{-2} \forall  |\text{z}|>1}
 \end{align}
 \end{document}
