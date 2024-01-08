@@ -57,88 +57,126 @@
 \renewcommand{\thetable}{\theenumi}
 \vspace{2cm}
 \textbf{Question: }
-For what value of $ n$, are the $ nth$ terms of two A.Ps: 63, 65, 67,... and 3, 10, 17,... equal?\\
+For what value of $ n$, are the $ nth$ terms of two A.Ps: 63, 65, 67,\dots and 3, 10, 17,\dots equal?\\
 \vspace{0.5cm}
 \textbf{Solution}:
 A sequence is said to be in Arithmetic Progression when it is in the form of
 \begin{align}
-\notag a, a+d, a+2d, a+3d,....
+a, a+d, a+2d, a+3d, \dots
 \end{align}
 where $a$ is first term and $d$ is common difference.\\
 When there are $ n$ terms, the sequence becomes
 \begin{align}
-\notag a, a+d, a+2d, a+3d,....., a+(n-1)d.\\
-\notag T_n = a+(n-1)d.
+a, a+d, a+2d, a+3d,\dots, a+\brak{n}d.\\
+T_n = a+\brak{n}d.
 \end{align}
 which is nth term.
 In the given question, there are two sequences.
 \begin{align}
-63, 65, 67....\label{eq:1}\\
-3, 10, 17....\label{eq:2}
+63, 65, 67 \dots \label{eq:1}\\
+3, 10, 17 \dots \label{eq:2}
 \end{align}
-let f(n) be unit step function.\\
+let u\brak{n} be unit step function.\\
 \begin{align}
-\text{i.e. f(n)}=
-\begin{array}{lr}
-    1,&\text{n}>=0\\
-    0,&\text{n}<0
-\end{array}
+u\brak{n} &=
+\begin{cases}
+1, & if  n \geq 0, \\
+0, & if  n < 0.
+\end{cases}
 \end{align}
 \begin{enumerate}
-\item [(i)]
-for the sequence $ \eqref{eq:1}$, let x(n) be $ nth$ term,
+\item
+for the sequence $ \eqref{eq:1}$, let x\brak{n} be $ nth$ term, 
+\begin{enumerate}
+\item
+Finding x\brak{n} for sequence $ \eqref{eq:1}$
 \begin{align}
-\notag a = 63\\
-\notag a+d = 65\\
-\notag d = 2\\
-\notag \text{x(n)} = 63 + (n-1)\times2\\
-\text{x(n)} = 61 + 2n \label{eq:3}
+a &= 63\\
+a+d &= 65\\
+d &= 2\\
+x\brak{n} &= 63 + \brak{n}\cdot2\\
+x\brak{n} &= 63 + 2n \label{eq:3}
 \end{align}
-\boxed{\text{x(n)} = 61\text{f(n-1)} + 2n\text{f(n-1)}}\\
-\begin{figure}
-    \includegraphics[width = 11cm]{Figure_1.png}
+$ \boxed{x\brak{n} = 63u\brak{n} + 2n\cdot u\brak{n}}$\\ 
+\item
+To find X\brak{z}:
+\begin{align}
+X\brak{z} &= \sum_{n=-\infty}^{\infty} x\brak{n}\times z^{-n}
+\end{align}
+\begin{align}
+X\brak{z} &= \sum_{n=-\infty}^{\infty} \brak{63u\brak{n}} + 2n\cdot u\brak{n}z^{-n}\\
+X\brak{z} &= \sum_{n=0}^{\infty} \brak{63 + 2n}z^{-n}
+\end{align}
+For the above sum to be convergent:\\
+by using ratio test:\\
+\begin{align}
+    \frac{\brak{n+1}z^{-n-1}}{\brak{n}z^{-n}} &<1\\
+    \frac{n+1}{n\cdot z}<1\\
+    \therefore |z|>1
+\end{align}
+This is called region of convergence.\\
+\begin{align}
+X\brak{z} = \sum_{n=0}^{\infty} \brak{63}z^{-n}+\sum_{n=1}^{\infty}\brak{2n}z^{-n}\\
+X\brak{z} = 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}\\
+\boxed{X\brak{z} = 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}}  \forall  |z|>1 \label{eq:5}
+\end{align}
+\end{enumerate}
+\item
+for sequence $ \eqref{eq:2}$ , let y\brak{n} be $ nth$ term\\
+\begin{enumerate}
+\item 
+Finding y(n) for $ \eqref{eq:2}$
+\begin{align}
+a &= 3 \\
+a+d &= 10\\
+d &= 7\\
+y\brak{n} &= 3 + \brak{n}\cdot 7\\
+y\brak{n} &= 7n + 3 \label{eq:4}\\
+y\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4}
+\end{align}
+
+\begin{figure}[ht]
+    \includegraphics[width = \linewidth]{Figure_3.png}
+    \caption{Graphs of x\brak{n}and y\brak{n}}
+    \label{Fig:1}
 \end{figure}
+\item
+To find Y\brak{z} :\\
 \begin{align}
-\text{To find X(z)(i.e. the 'z' transform)}:\\
-\text{X(z)} = \sum_{n=-\infty}^{\infty} x(n)\times \text{z}^{-n}\\
-\notag \text{X(z)} = \sum_{n=-\infty}^{\infty} (61\text{f(n-1)} + 2\text{nf(n-1)})\text{z}^{-n}\\
-\text{X(z)} = \sum_{n=1}^{\infty} (61 + 2n)\text{z}^{-n} + 0
+Y\brak{z} &= \sum_{n=-\infty}^{\infty} y\brak{n}z^{-n}\\
+Y\brak{z} &= \sum_{n=-\infty}^{\infty} \brak{3u\brak{n} + 7nu\brak{n}}z^{-n}\\
+Y\brak{z} &= \sum_{n=0}^{\infty} \brak{3 + 7n}z^{-n} + 0
 \end{align}
+
+even for y(n), R.O.C is $ |z|>1$\\
 \begin{align}
-\notag \text{X(z)} = \lim_{n\to\infty} [61(1-z^{-n})(z-1)^{-1}+ 2(z-1)^{-1}\\
-+ 2(z^{n-1}-1)(z^{1-n})(z-1)^{-1}-2[(n-1)z+1]z^{n-1}]\\
-\boxed{\text{X(z)} = 61(\text{z}-1)^{-1} + 2(2z-1)(z-1)^{-2}  \forall  |z|>1}
+Y\brak{z} = \sum_{n=0}^{\infty} \brak{3}z^{-n}+\sum_{n=1}^{\infty}\brak{7n}z^{-n}\\
+Y\brak{z} = 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}\\
+\boxed{Y\brak{z} = 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}} \forall  |z|>1 \label{eq:6}
 \end{align}
-\item[(ii)]
-for sequence $ \eqref{eq:2}$ , let y(n) be $ nth$ term,
+given, x\brak{n} = y\brak{n}\\
 \begin{align}
-\notag a = 3 \\
-\notag a+d = 10\\
-\notag d = 7\\
-\notag \text{y(n)} = 3 + (n-1)\times7\\
-\text{y(n)} = 7n - 4 \label{eq:4}\\
-\boxed{\text{y(n)} = -4\text{f(n-1)} + 7n\text{f(n-1)}}
-\end{align}
-\begin{figure}
-    \includegraphics[width = 11cm]{Figure_2.png}
-\end{figure}
-To find Y(z) (the 'z' transform):\\
-\begin{align}
-\text{Y(z)} = \sum_{n=-\infty}^{\infty} y(n)\text{z}^{-n}\\
-\notag \text{Y(z)} = \sum_{n=-\infty}^{\infty} (-4\text{f(n-1)} + 7n\text{f(n-1)})\text{z}^{-n}\\
-\notag \text{Y(z)} = \sum_{n=1}^{\infty} (-4 + 7n)\text{z}^{-n} + 0\\
-\notag \text{Y(z)} = \lim_{n\to\infty} [-4(1-z^{-n})(z-1)^{-1}+ 7(z-1)^{-1}\\
-+ 7(z^{n-1}-1)(z^{1-n})(z-1)^{-1}-7[(n-1)z+1]z^{n-1}]\\
-\boxed{\text{Y(z)} = -4(z-1)^{-1} + 7(2z-1)(z-1)^{-2} \forall  |z|>1}
-\end{align}
-given, x(n) = y(n)\\
-\begin{align}
-\therefore 61 + 2n = 7n -4\\
-\notag 5n = 65\\
-n = 13\\
-\notag So, \text{x(n)} = 61 + 2\times13 = 87 \text{ and}\\
-\notag \text{y(n)} = 7\times13 - 4 = 87
+\therefore 63 + 2n &= 7n+3\\
+5n &= 60\\
+n &= 12\\
+So, x\brak{n} &= 63 + 2\cdot12 = 87  and\\
+y\brak{n} &= 7\cdot12 + 3 = 87
 \end{align}
 $ \therefore$ 13th terms of given two APs are equal.\\\\
 \end{enumerate}
+\end{enumerate}
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+      variable&description&value\\\hline
+         a&first term of an AP&none\\\hline
+         x(n)& $ n^{th}$ term of sequence $ \eqref{eq:1}$&equation $ \eqref{eq:3}$\\\hline
+         y(n)& $ n^{th}$ term of sequence $ \eqref{eq:2}$& equation $ \eqref{eq:4}$\\\hline
+         X(z)& z-transform of sequence $ \eqref{eq:1}$& equation $ \eqref{eq:5}$\\\hline
+         Y(z)& z-transform of sequence $ \eqref{eq:2}$& equation $ \eqref{eq:6}$\\\hline
+    \end{tabular}
+    \caption{parameters used}
+    \label{tab:my_label}
+\end{table}
 \end{document}
