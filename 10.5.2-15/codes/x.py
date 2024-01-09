@@ -15,7 +15,7 @@ def my_function2(n):
         return 0
 
 # Generate x values (integers)
-x_values = np.arange(-10, 11, 1)
+x_values = np.arange(-14, 15, 1)
 
 # Generate y values using the function
 y_values = [my_function(n) for n in x_values]

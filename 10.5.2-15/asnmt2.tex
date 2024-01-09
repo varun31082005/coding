@@ -91,31 +91,29 @@ Finding x\brak{n} for sequence $ \eqref{eq:1}$
 \begin{align}
 a &= 63\\
 a+d &= 65\\
-d &= 2\\
-x\brak{n} &= 63 + \brak{n}\cdot2\\
-x\brak{n} &= 63 + 2n \label{eq:3}
+\implies x\brak{n} &= 63 + 2n \label{eq:3}\\
+\therefore x\brak{n} &= 63u\brak{n} + 2n\cdot u\brak{n}
 \end{align}
-$ \boxed{x\brak{n} = 63u\brak{n} + 2n\cdot u\brak{n}}$\\ 
 \item
 To find X\brak{z}:
 \begin{align}
 X\brak{z} &= \sum_{n=-\infty}^{\infty} x\brak{n}\times z^{-n}
 \end{align}
 \begin{align}
-X\brak{z} &= \sum_{n=-\infty}^{\infty} \brak{63u\brak{n}} + 2n\cdot u\brak{n}z^{-n}\\
-X\brak{z} &= \sum_{n=0}^{\infty} \brak{63 + 2n}z^{-n}
+\implies X\brak{z} &= \sum_{n=-\infty}^{\infty} \brak{63u\brak{n}} + 2n\cdot u\brak{n}z^{-n}\\
+\implies X\brak{z} &= \sum_{n=0}^{\infty} \brak{63 + 2n}z^{-n}
 \end{align}
 For the above sum to be convergent:\\
 by using ratio test:\\
 \begin{align}
     \frac{\brak{n+1}z^{-n-1}}{\brak{n}z^{-n}} &<1\\
-    \frac{n+1}{n\cdot z}<1\\
-    \therefore |z|>1
+   \implies \frac{n+1}{n\cdot z}<1\\
+   \therefore |z|>1
 \end{align}
 This is called region of convergence.\\
 \begin{align}
 X\brak{z} = \sum_{n=0}^{\infty} \brak{63}z^{-n}+\sum_{n=1}^{\infty}\brak{2n}z^{-n}\\
-X\brak{z} = 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}\\
+\implies X\brak{z} = 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}\\
 \boxed{X\brak{z} = 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}}  \forall  |z|>1 \label{eq:5}
 \end{align}
 \end{enumerate}
@@ -127,14 +125,12 @@ Finding y(n) for $ \eqref{eq:2}$
 \begin{align}
 a &= 3 \\
 a+d &= 10\\
-d &= 7\\
-y\brak{n} &= 3 + \brak{n}\cdot 7\\
-y\brak{n} &= 7n + 3 \label{eq:4}\\
-y\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4}
+\implies y\brak{n} &= 7n + 3 \label{eq:4}\\
+\therefore y\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4}
 \end{align}
 
 \begin{figure}[ht]
-    \includegraphics[width = \linewidth]{Figure_3.png}
+    \includegraphics[width = \linewidth]{Figure_1.png}
     \caption{Graphs of x\brak{n}and y\brak{n}}
     \label{Fig:1}
 \end{figure}
@@ -142,37 +138,37 @@ y\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4}
 To find Y\brak{z} :\\
 \begin{align}
 Y\brak{z} &= \sum_{n=-\infty}^{\infty} y\brak{n}z^{-n}\\
-Y\brak{z} &= \sum_{n=-\infty}^{\infty} \brak{3u\brak{n} + 7nu\brak{n}}z^{-n}\\
-Y\brak{z} &= \sum_{n=0}^{\infty} \brak{3 + 7n}z^{-n} + 0
+\implies Y\brak{z} &= \sum_{n=-\infty}^{\infty} \brak{3u\brak{n} + 7nu\brak{n}}z^{-n}\\
+\implies Y\brak{z} &= \sum_{n=0}^{\infty} \brak{3 + 7n}z^{-n} + 0
 \end{align}
 
 even for y(n), R.O.C is $ |z|>1$\\
 \begin{align}
 Y\brak{z} = \sum_{n=0}^{\infty} \brak{3}z^{-n}+\sum_{n=1}^{\infty}\brak{7n}z^{-n}\\
-Y\brak{z} = 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}\\
+\implies Y\brak{z} = 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}\\
 \boxed{Y\brak{z} = 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}} \forall  |z|>1 \label{eq:6}
 \end{align}
 given, x\brak{n} = y\brak{n}\\
 \begin{align}
 \therefore 63 + 2n &= 7n+3\\
 5n &= 60\\
-n &= 12\\
-So, x\brak{n} &= 63 + 2\cdot12 = 87  and\\
-y\brak{n} &= 7\cdot12 + 3 = 87
+\implies n &= 12
 \end{align}
 $ \therefore$ 13th terms of given two APs are equal.\\\\
 \end{enumerate}
 \end{enumerate}
+
+
 \begin{table}[ht]
     \centering
     \begin{tabular}{|c|c|c|}
     \hline
       variable&description&value\\\hline
          a&first term of an AP&none\\\hline
-         x(n)& $ n^{th}$ term of sequence $ \eqref{eq:1}$&equation $ \eqref{eq:3}$\\\hline
-         y(n)& $ n^{th}$ term of sequence $ \eqref{eq:2}$& equation $ \eqref{eq:4}$\\\hline
-         X(z)& z-transform of sequence $ \eqref{eq:1}$& equation $ \eqref{eq:5}$\\\hline
-         Y(z)& z-transform of sequence $ \eqref{eq:2}$& equation $ \eqref{eq:6}$\\\hline
+         x(n)& $ n^{th}$ term of sequence 63,65,67 \dots & 63u\brak{n} + 2nu\brak{n}\\\hline
+         y(n)& $ n^{th}$ term of sequence 3,10,17 \dots& 3u\brak{n} + 7nu\brak{n}\\\hline
+         X(z)& z-transform of sequence 63,65,67 \dots &$ 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}$ \\\hline
+         Y(z)& z-transform of sequence 3,10,17 \dots&$ 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}$\\\hline
     \end{tabular}
     \caption{parameters used}
     \label{tab:my_label}
