@@ -58,6 +58,20 @@
 For what value of $ n$, are the $ nth$ terms of two A.Ps: 63, 65, 67,\dots and 3, 10, 17,\dots equal?\\
 \vspace{0.5cm}
 \textbf{Solution}:
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+      variable&description&value\\\hline
+         x(n)& $ n^{th}$ term of sequence 63,65,67 \dots & 63u\brak{n} + 2nu\brak{n}\\\hline
+         y(n)& $ n^{th}$ term of sequence 3,10,17 \dots& 3u\brak{n} + 7nu\brak{n}\\\hline
+         X(z)& z-transform of sequence 63,65,67 \dots &$ 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}$ \\\hline
+         Y(z)& z-transform of sequence 3,10,17 \dots&$ 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}$\\\hline
+    \end{tabular}
+    \caption{parameters used}
+    \label{tab:my_label}
+\end{table}
 A sequence is said to be in Arithmetic Progression when it is in the form of
 \begin{align}
 a, a+d, a+2d, a+3d, \dots
@@ -89,8 +103,8 @@ for the sequence $ \eqref{eq:1}$, let x\brak{n} be $ nth$ term,
 \item
 Finding x\brak{n} for sequence $ \eqref{eq:1}$
 \begin{align}
-a &= 63\\
-a+d &= 65\\
+x(0) &= 63\\
+x(0)+d &= 65\\
 \implies x\brak{n} &= 63 + 2n \label{eq:3}\\
 \therefore x\brak{n} &= 63u\brak{n} + 2n\cdot u\brak{n}
 \end{align}
@@ -101,8 +115,10 @@ X\brak{z} &= \sum_{n=-\infty}^{\infty} x\brak{n}\times z^{-n}
 \end{align}
 \begin{align}
 \implies X\brak{z} &= \sum_{n=-\infty}^{\infty} \brak{63u\brak{n}} + 2n\cdot u\brak{n}z^{-n}\\
+\hspace{1cm}
 \implies X\brak{z} &= \sum_{n=0}^{\infty} \brak{63 + 2n}z^{-n}
 \end{align}
+\\\\\\
 For the above sum to be convergent:\\
 by using ratio test:\\
 \begin{align}
@@ -123,8 +139,8 @@ for sequence $ \eqref{eq:2}$ , let y\brak{n} be $ nth$ term\\
 \item 
 Finding y(n) for $ \eqref{eq:2}$
 \begin{align}
-a &= 3 \\
-a+d &= 10\\
+y(0) &= 3 \\
+y(0)+d &= 10\\
 \implies y\brak{n} &= 7n + 3 \label{eq:4}\\
 \therefore y\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4}
 \end{align}
@@ -152,25 +168,11 @@ given, x\brak{n} = y\brak{n}\\
 \begin{align}
 \therefore 63 + 2n &= 7n+3\\
 5n &= 60\\
-\implies n &= 12
+\implies n &= 12\\
+So, x\brak{n} &= 63 + 2\cdot12 = 87  and\\
+y\brak{n} &= 7\cdot12 + 3 = 87
 \end{align}
 $ \therefore$ 13th terms of given two APs are equal.\\\\
 \end{enumerate}
 \end{enumerate}
-
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-      variable&description&value\\\hline
-         a&first term of an AP&none\\\hline
-         x(n)& $ n^{th}$ term of sequence 63,65,67 \dots & 63u\brak{n} + 2nu\brak{n}\\\hline
-         y(n)& $ n^{th}$ term of sequence 3,10,17 \dots& 3u\brak{n} + 7nu\brak{n}\\\hline
-         X(z)& z-transform of sequence 63,65,67 \dots &$ 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}$ \\\hline
-         Y(z)& z-transform of sequence 3,10,17 \dots&$ 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}$\\\hline
-    \end{tabular}
-    \caption{parameters used}
-    \label{tab:my_label}
-\end{table}
 \end{document}
