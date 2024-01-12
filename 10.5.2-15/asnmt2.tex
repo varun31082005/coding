@@ -64,10 +64,14 @@ For what value of $ n$, are the $ nth$ terms of two A.Ps: 63, 65, 67,\dots and 3
     \begin{tabular}{|c|c|c|}
     \hline
       variable&description&value\\\hline
-         x(n)& $ n^{th}$ term of sequence 63,65,67 \dots & 63u\brak{n} + 2nu\brak{n}\\\hline
-         y(n)& $ n^{th}$ term of sequence 3,10,17 \dots& 3u\brak{n} + 7nu\brak{n}\\\hline
-         X(z)& z-transform of sequence 63,65,67 \dots &$ 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}$ \\\hline
-         Y(z)& z-transform of sequence 3,10,17 \dots&$ 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}$\\\hline
+         $ x_1\brak{0}$& $ 1^{st}$ term of sequence 63,65,67 \dots & 63\\\hline
+         $ x_2\brak{0}$& $ 1^{st}$ term of sequence 3,10,17 \dots& 3\\\hline
+         $ x_1\brak{n}$& $ n^{th}$ term of sequence 63,65,67 \dots & 63u\brak{n} + 2nu\brak{n}\\\hline
+         $ x_2\brak{n}$& $ n^{th}$ term of sequence 3,10,17 \dots& 3u\brak{n} + 7nu\brak{n}\\\hline
+         $ U\brak{z}$& z-transform of $ u\brak{n}$& $ z\cdot\brak{z-1}^{-1} \forall |z|>1$\\\hline
+         $ U_n\brak{z}$& z-transform of $ nu\brak{n}$& $ z\cdot\brak{z-1}^{-2} \forall |z|>1$\\\hline
+         $ X_1\brak{z}$& z-transform of sequence 63,65,67 \dots &$ 63z\brak{z-1}^{-1} + 2z\brak{z-1}^{-2} \forall |z|>1$ \\\hline
+         $ X_2\brak{z}$& z-transform of sequence 3,10,17 \dots&$ 3z\brak{z-1}^{-1} + 7z\brak{z-1}^{-2} \forall |z|>1$\\\hline
     \end{tabular}
     \caption{parameters used}
     \label{tab:my_label}
@@ -80,7 +84,7 @@ where $a$ is first term and $d$ is common difference.\\
 When there are $ n$ terms, the sequence becomes
 \begin{align}
 a, a+d, a+2d, a+3d,\dots, a+\brak{n}d.\\
-T_n = a+\brak{n}d.
+t_n = a+\brak{n}d.
 \end{align}
 which is nth term.
 In the given question, there are two sequences.
@@ -96,53 +100,81 @@ u\brak{n} &=
 0, & if  n < 0.
 \end{cases}
 \end{align}
+For finding U\brak{z}:\\
+\begin{align}
+U\brak{z} &= \sum_{n=-\infty}^{\infty} u\brak{n}\\
+\implies U\brak{z} &= \sum_{n=0}^{\infty}z^{-n}
+\end{align}
+this is infinite G.P. sequence with common ratio $ z^{-1}$.\\
+So, for this to converge $ |z|>1$. This is called region of convergence.\\
+\begin{align}
+\hspace{2cm}\implies U\brak{z} &= \sum_{n=0}^{\infty} z^{-n}\\
+\hspace{2cm}\therefore U\brak{z} &= z\cdot\brak{z-1}^{-1} \forall |z|>1 \label{eq:6}
+\end{align}
+\hspace{3cm}similarly,\\
+\begin{align}
+nu\brak{n} &=
+\begin{cases}
+n, & if  n \geq 0, \\
+0, & if  n < 0.
+\end{cases}
+\end{align}
+For finding $ U_n\brak{z}$:\\
+\begin{align}
+U_n\brak{z} &= \sum_{n=-\infty}^{\infty} nu\brak{n}\\
+\implies U_n\brak{z} &= \sum_{n=1}^{\infty}nz^{-n}
+\end{align}
+this is infinite A.G.P. sequence with common ratio $ z^{-1}$ and common difference 1.\\
+So, for this to converge $ |z|>1$. This is called region of convergence.\\
+\begin{align}
+\implies U_n\brak{z} &= \sum_{n=1}^{\infty} z^{-n}\\
+\therefore U_n\brak{z} &= z\cdot\brak{z-1}^{-2} \forall |z|>1 \label{eq:7}
+\end{align}
+for an A.P. with $ n^{th}$ term x\brak{n} given by:\\
+\begin{align}
+x\brak{n} = x\brak{0} + nd\\
+so, X\brak{z} = \sum_{n=-\infty}^{\infty} x\brak{n}\cdot z^{-n}\\
+\implies X\brak{z} = \sum_{n=-\infty}^{\infty} \brak{x\brak{0}u\brak{n} + dn\cdot u\brak{n}z^{-n}}\\
+\notag from \eqref{eq:6} and \eqref{eq:7}: \\
+\boxed{X\brak{z} = x\brak{0}z\brak{z-1}^{-1} + dz\brak{z-1}^{-2}}  \forall  |z|>1 \label{eq:5}
+\end{align}
 \begin{enumerate}
 \item
-for the sequence $ \eqref{eq:1}$, let x\brak{n} be $ nth$ term, 
+for the sequence $ \eqref{eq:1}$, $ let x_1\brak{n}$  be $ nth$ term, 
 \begin{enumerate}
 \item
-Finding x\brak{n} for sequence $ \eqref{eq:1}$
+Finding $ x_1\brak{n}$ for sequence $ \eqref{eq:1}$
 \begin{align}
-x(0) &= 63\\
-x(0)+d &= 65\\
-\implies x\brak{n} &= 63 + 2n \label{eq:3}\\
-\therefore x\brak{n} &= 63u\brak{n} + 2n\cdot u\brak{n}
+x_1\brak{0} &= 63\\
+x_1\brak{0}+d &= 65\\
+\implies x_1\brak{n} &= 63 + 2n \label{eq:3}\\
+\therefore x_1\brak{n} &= 63u\brak{n} + 2n\cdot u\brak{n}
 \end{align}
 \item
-To find X\brak{z}:
+To find $ X_1\brak{z}$:
 \begin{align}
-X\brak{z} &= \sum_{n=-\infty}^{\infty} x\brak{n}\times z^{-n}
-\end{align}
-\begin{align}
-\implies X\brak{z} &= \sum_{n=-\infty}^{\infty} \brak{63u\brak{n}} + 2n\cdot u\brak{n}z^{-n}\\
-\hspace{1cm}
-\implies X\brak{z} &= \sum_{n=0}^{\infty} \brak{63 + 2n}z^{-n}
-\end{align}
-\\\\\\
-For the above sum to be convergent:\\
-by using ratio test:\\
-\begin{align}
-    \frac{\brak{n+1}z^{-n-1}}{\brak{n}z^{-n}} &<1\\
-   \implies \frac{n+1}{n\cdot z}<1\\
-   \therefore |z|>1
-\end{align}
-This is called region of convergence.\\
-\begin{align}
-X\brak{z} = \sum_{n=0}^{\infty} \brak{63}z^{-n}+\sum_{n=1}^{\infty}\brak{2n}z^{-n}\\
-\implies X\brak{z} = 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}\\
-\boxed{X\brak{z} = 63z\brak{z-1}^{-1} + 2\brak{2z-1}\brak{z-1}^{-2}}  \forall  |z|>1 \label{eq:5}
+x_1\brak{0}&=63\\
+d &= 2\\
+from \eqref{eq:5} X_1(z) &= 63z\brak{z-1}^{-1} + 2z\brak{z-1}^{-2}  \forall  |z|>1
 \end{align}
 \end{enumerate}
 \item
-for sequence $ \eqref{eq:2}$ , let y\brak{n} be $ nth$ term\\
+for sequence $ \eqref{eq:2}$ , let $ x_2\brak{n}$ be $ nth$ term\\
 \begin{enumerate}
 \item 
-Finding y(n) for $ \eqref{eq:2}$
+Finding $ x_2(n)$ for $ \eqref{eq:2}$
 \begin{align}
-y(0) &= 3 \\
-y(0)+d &= 10\\
-\implies y\brak{n} &= 7n + 3 \label{eq:4}\\
-\therefore y\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4}
+x_2\brak{0} &= 3 \\
+x_2\brak{0}+d &= 10\\
+\implies x_2\brak{n} &= 7n + 3 \label{eq:4}\\
+\therefore x_2\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4}
+\end{align}
+\item
+To find $ X_2\brak{z}$ :\\
+\begin{align}
+x_2\brak{0}&=3\\
+d &= 7\\
+from \eqref{eq:5} X_2(z) &= 3z\brak{z-1}^{-1} + 7z\brak{z-1}^{-2}  \forall  |z|>1
 \end{align}
 
 \begin{figure}[ht]
@@ -150,25 +182,11 @@ y(0)+d &= 10\\
     \caption{Graphs of x\brak{n}and y\brak{n}}
     \label{Fig:1}
 \end{figure}
-\item
-To find Y\brak{z} :\\
-\begin{align}
-Y\brak{z} &= \sum_{n=-\infty}^{\infty} y\brak{n}z^{-n}\\
-\implies Y\brak{z} &= \sum_{n=-\infty}^{\infty} \brak{3u\brak{n} + 7nu\brak{n}}z^{-n}\\
-\implies Y\brak{z} &= \sum_{n=0}^{\infty} \brak{3 + 7n}z^{-n} + 0
-\end{align}
-
-even for y(n), R.O.C is $ |z|>1$\\
-\begin{align}
-Y\brak{z} = \sum_{n=0}^{\infty} \brak{3}z^{-n}+\sum_{n=1}^{\infty}\brak{7n}z^{-n}\\
-\implies Y\brak{z} = 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}\\
-\boxed{Y\brak{z} = 3z\brak{z-1}^{-1} + 7\brak{2z-1}\brak{z-1}^{-2}} \forall  |z|>1 \label{eq:6}
-\end{align}
-given, x\brak{n} = y\brak{n}\\
+given, $ x_1\brak{n} = x_2\brak{n}$\\
 \begin{align}
 \therefore 63 + 2n &= 7n+3\\
 5n &= 60\\
-\implies n &= 12
+\implies n &= 12\\
 \end{align}
 $ \therefore$ 13th terms of given two APs are equal.\\\\
 \end{enumerate}
