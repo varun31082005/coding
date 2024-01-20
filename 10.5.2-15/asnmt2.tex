@@ -62,46 +62,37 @@ For what value of $ n$, are the $ nth$ terms of two A.Ps: 63, 65, 67,\dots and 3
 \begin{table}[htbp] 
 \centering
 \input{table1}
-\caption{parameters used}
-\label{table 1}
+\caption{input values}
+\label{tab: Table 1}
 \end{table}
 \begin{align}
-\boxed{X\brak{z} = x\brak{0}z\brak{z-1}^{-1} + dz\brak{z-1}^{-2}  \forall  |z|>1}\label{eq:5}
+x_i\brak{n} &= x\brak{0}u\brak{n} + dnu\brak{n}\\
+X\brak{z} &= \frac{x\brak{0}z}{z-1} + \frac{dz}{\brak{z-1}^{2}} \quad |z|>1\label{eq:5}
 \end{align}
 \begin{enumerate}
 \item
-For the $ 1{st}$ A.P. $ let x_1\brak{n}$  be $ nth$ term: 
-Finding $ x_1\brak{n}$ for the $ 1{st}$ A.P:
 \begin{align}
-x_1\brak{0}+d_1 &= 65\\
-\implies x_1\brak{n} &= 63u\brak{n} + 2n\cdot u\brak{n} \label{eq:3}
-\end{align}
-To find $ X_1\brak{z}$:
-\begin{align}
-\therefore X_1(z) &= 63z\brak{z-1}^{-1} + 2z\brak{z-1}^{-2}  \forall  |z|>1
+x_1\brak{n} &= 63u\brak{n} + 2nu\brak{n} \label{eq:3}\\
+%To find $ X_1\brak{z}$:
+X_1(z) &= \frac{63z}{z-1} + \frac{2z}{\brak{z-1}^{2}}  \quad |z|>1
 \end{align}
 \item
-For the $ 2{nd}$ A.P.  $ let x_2\brak{n}$  be $ nth$ term:\\
-Finding $ x_2(n)$ for the for the $ 1{st}$ A.P:
 \begin{align}
-x_2\brak{0}+d_2 &= 10\\
-\implies x_2\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4} 
-\end{align}
-To find $ X_2\brak{z}$ :\\
-\begin{align}
-\therefore X_2(z) &= 3z\brak{z-1}^{-1} + 7z\brak{z-1}^{-2}  \forall  |z|>1
+x_2\brak{n} &= 3u\brak{n} + 7nu\brak{n} \label{eq:4}\\ 
+%To find $ X_2\brak{z}$ :\\
+X_2(z) &= \frac{3z}{z-1} + \frac{7z}{\brak{z-1}^{2}} \quad |z|>1
 \end{align}
 \item
 
-given, $ x_1\brak{n} = x_2\brak{n}$\\
+given,
 \begin{align}
+ x_1\brak{n} &= x_2\brak{n}\\
 \therefore 63 + 2n &= 7n+3\\
-5n &= 60\\
 \implies n &= 12
 \end{align}\begin{figure}[ht]
     \includegraphics[width = \linewidth]{Figure_1.png}
     \caption{Graphs of $ x_1\brak{n}$ and $ x_2\brak{n}$ and both are equal at $ n=12$}
-    \label{Fig:1}
+    \label{fig: 1}
 \end{figure}
 \end{enumerate}
 \end{document}
