@@ -61,7 +61,7 @@ For what value of $ n$, are the $ nth$ terms of two A.Ps: 63, 65, 67,\dots and 3
 
 \begin{table}[htbp] 
 \centering
-\input{table1.tex}
+\input{table1}
 \caption{parameters used}
 \label{table 1}
 \end{table}
@@ -71,54 +71,37 @@ For what value of $ n$, are the $ nth$ terms of two A.Ps: 63, 65, 67,\dots and 3
 \begin{enumerate}
 \item
 For the $ 1{st}$ A.P. $ let x_1\brak{n}$  be $ nth$ term: 
-\begin{enumerate}
-\item
 Finding $ x_1\brak{n}$ for the $ 1{st}$ A.P:
 \begin{align}
-x_1\brak{0} &= 63\\
 x_1\brak{0}+d_1 &= 65\\
-\implies x_1\brak{n} &= 63 + 2n \label{eq:3}\\
-\therefore x_1\brak{n} &= 63u\brak{n} + 2n\cdot u\brak{n}
+\implies x_1\brak{n} &= 63u\brak{n} + 2n\cdot u\brak{n} \label{eq:3}
 \end{align}
-\item
 To find $ X_1\brak{z}$:
 \begin{align}
-x_1\brak{0}&=63\\
-d_1 &= 2\\
 \therefore X_1(z) &= 63z\brak{z-1}^{-1} + 2z\brak{z-1}^{-2}  \forall  |z|>1
 \end{align}
-\end{enumerate}
 \item
 For the $ 2{nd}$ A.P.  $ let x_2\brak{n}$  be $ nth$ term:\\
-\begin{enumerate}
-\item 
 Finding $ x_2(n)$ for the for the $ 1{st}$ A.P:
 \begin{align}
-x_2\brak{0} &= 3 \\
 x_2\brak{0}+d_2 &= 10\\
-\implies x_2\brak{n} &= 7n + 3 \label{eq:4}\\
-\therefore x_2\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4}
+\implies x_2\brak{n} &= 3u\brak{n} + 7n\cdot u\brak{n} \label{eq:4} 
 \end{align}
-\item
 To find $ X_2\brak{z}$ :\\
 \begin{align}
-x_2\brak{0}&=3\\
-d_2 &= 7\\
 \therefore X_2(z) &= 3z\brak{z-1}^{-1} + 7z\brak{z-1}^{-2}  \forall  |z|>1
 \end{align}
+\item
 
-\begin{figure}[ht]
-    \includegraphics[width = \linewidth]{Figure_1.png}
-    \caption{Graphs of $ x_1\brak{n}$ and $ x_2\brak{n}$ and both are equal at $ n=12$}
-    \label{Fig:1}
-\end{figure}
 given, $ x_1\brak{n} = x_2\brak{n}$\\
 \begin{align}
 \therefore 63 + 2n &= 7n+3\\
 5n &= 60\\
-\implies n &= 12\\
-\end{align}
-$ \therefore$ 13th terms of given two APs are equal.\\\\
-\end{enumerate}
+\implies n &= 12
+\end{align}\begin{figure}[ht]
+    \includegraphics[width = \linewidth]{Figure_1.png}
+    \caption{Graphs of $ x_1\brak{n}$ and $ x_2\brak{n}$ and both are equal at $ n=12$}
+    \label{Fig:1}
+\end{figure}
 \end{enumerate}
 \end{document}
