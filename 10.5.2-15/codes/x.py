@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Generate x values using linspace
-x_values = np.linspace(-14, 14, 29)  # 29 points from -14 to 14
+x_values = np.linspace(0, 14, 15)  # 29 points from -14 to 14
 
 y_values = np.where(x_values >= 0, 63 + 2 * x_values, 0)
 
