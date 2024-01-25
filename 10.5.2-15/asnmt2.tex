@@ -74,21 +74,28 @@ X\brak{z} &= \frac{x\brak{0}}{1-z^{1}} + \frac{dz^{-1}}{\brak{1-z^{-1}}^{2}} \qu
 \begin{align}
 x_1\brak{n} &= 63u\brak{n} + 2nu\brak{n} \label{eq:3}\\
 %To find $ X_1\brak{z}$:
-X_1(z) &= \frac{63}{1-z^{1}} + \frac{2z^{-1}}{\brak{1-z^{-1}}^{2}}  \quad |z|>1
+X_1\brak{z} &= \frac{63}{1-z^{1}} + \frac{2z^{-1}}{\brak{1-z^{-1}}^{2}}  \quad |z|>1
 \end{align}
 \item
 \begin{align}
 x_2\brak{n} &= 3u\brak{n} + 7nu\brak{n} \label{eq:4}\\ 
 %To find $ X_2\brak{z}$ :\\
-X_2(z) &= \frac{3}{1-z^{1}} + \frac{7z^{-1}}{\brak{1-z^{-1}}^{2}} \quad |z|>1
+X_2\brak{z} &= \frac{3}{1-z^{1}} + \frac{7z^{-1}}{\brak{1-z^{-1}}^{2}} \quad |z|>1
 \end{align}
 \item
 
 given,
 \begin{align}
- x_1\brak{n} &= x_2\brak{n}\\
-\therefore 63 + 2n &= 7n+3\\
-\implies n &= 12
+ %x_1\brak{n} &= x_2\brak{n}\\
+%\therefore 63 + 2n &= 7n+3\\
+X_1\brak{z} &= X_2\brak{z}\\
+\frac{63}{1-z^{1}} + \frac{2z^{-1}}{\brak{1-z^{-1}}^{2}} &=\frac{3}{1-z^{1}} + \frac{7z^{-1}}{\brak{1-z^{-1}}^{2}}\\
+\implies \frac{60}{1-z^{1}}&=\frac{5z^{-1}}{\brak{1-z^{-1}}^{2}}
+\end{align}
+on taking inverse z-transform,\\
+\begin{align}
+    60u\brak{n} &= 5nu\brak{n}\\
+    \implies n &=12
 \end{align}
 \begin{figure}[h!]
     \includegraphics[width = \columnwidth]{Figure_1.png}
