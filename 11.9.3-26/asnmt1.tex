@@ -65,19 +65,6 @@ Insert two numbers between 3 and 81 so that the resulting sequence is G.P.\\
 $ n^{th}$ term of a GP is $ ar^{n}u\brak{n}$.
 \begin{enumerate}
 \item 
-\begin{align}
-x\brak{n} &= ar^{n}u\brak{n} \label{eq:11.9.3.26.1}\\
-X\brak{z} &= \frac{a}{1-rz^{-1}} \quad |z|>|r| \label{eq:11.9.3.26.2}
-\end{align}
-Z-transform of first term, i.e. 3u\brak{n} is:
-\begin{align}
-    X_3\brak{z} &= \frac{3}{1-z^{-1}} \quad |z|>1 \label{eq:11.9.3.26.3}
-\end{align}
-Z-transform of fourth term, i.e. 81u\brak{n} is:
-\begin{align}
-X_{81}\brak{z} &= \frac{81}{1-z^{-1}} \quad |z|>1 \label{eq:11.9.3.26.4}
-\end{align}
-\item 
 given,
 \begin{align}
 a &= 3\\
@@ -85,6 +72,11 @@ ar^3 &=81\\
 \implies r&=3
 \end{align}
 $ \therefore $ Required numbers are 9 and 27.
+\item 
+\begin{align}
+x\brak{n} &= ar^{n}u\brak{n} \label{eq:11.9.3.26.1}\\
+X\brak{z} &= \frac{a}{1-rz^{-1}} \quad |z|>|r| \label{eq:11.9.3.26.2}
+\end{align}
 \begin{figure}[h!]
     \includegraphics[width = \columnwidth]{figs/Figure_1.png}
     \caption{Graph of $ x\brak{n}$ }
