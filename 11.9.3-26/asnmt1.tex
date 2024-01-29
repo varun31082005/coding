@@ -52,30 +52,43 @@
 \maketitle
 \newpage
 \bigskip
-
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
 \vspace{2cm}
 \textbf{Question: }
 Insert two numbers between 3 and 81 so that the resulting sequence is G.P.\\
-\textbf{Solution}:
-A sequence is said to be in Geometric Progression when it is in the form of $ a, ar, ar^2, ar^3, ar^4..$\\
-where $a$ is first term and $r$ is common ratio.\\
-When there are four terms, the sequence becomes $ a, ar, ar^2, ar^3$\\
-From the question given
+\textbf{Solution}:\\
+\begin{table}[htbp] 
+\centering
+\input{tables/table1}
+\caption{input values}
+\label{tab: Table 11.9.3.26.15}
+\end{table}
+$ n^{th}$ term of a GP is $ ar^{n}u\brak{n}$.
+\begin{enumerate}
+\item 
 \begin{align}
-a = 3 \label{eq:1.11.9.3.26}\\
-ar^3 = 81 \label{eq:2.11.9.3.26}
+x\brak{n} &= ar^{n}u\brak{n} \label{eq:11.9.3.26.1}\\
+X\brak{z} &= \frac{a}{1-rz^{-1}} \quad |z|>|r| \label{eq:11.9.3.26.2}
 \end{align}
-from $ \eqref{eq:1.11.9.3.26}$ and $ \eqref{eq:2.11.9.3.26}$ we get
+Z-transform of first term, i.e. 3u\brak{n} is:
 \begin{align}
-\notag r^3 = 27 \\
-\notag r = 3
+    X_3\brak{z} &= \frac{3}{1-z^{-1}} \quad |z|>1 \label{eq:11.9.3.26.3}
 \end{align}
-the sequence required is:
+Z-transform of fourth term, i.e. 81u\brak{n} is:
 \begin{align}
-3, 3 \times 3, 3 \times 3^2, 81
+X_{81}\brak{z} &= \frac{81}{1-z^{-1}} \quad |z|>1 \label{eq:11.9.3.26.4}
+\end{align}
+\item 
+given,
+\begin{align}
+a &= 3\\
+ar^3 &=81\\
+\implies r&=3
 \end{align}
 $ \therefore $ Required numbers are 9 and 27.
-
+\begin{figure}[h!]
+    \includegraphics[width = \columnwidth]{figs/Figure_1.png}
+    \caption{Graph of $ x\brak{n}$ }
+    \label{fig: 11.9.3.26.17}
+\end{figure}
+\end{enumerate}
 \end{document}
