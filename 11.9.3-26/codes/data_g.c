@@ -1,4 +1,15 @@
 #include <stdio.h>
+void print(FILE *file,int a, int r, int start_n, int end_n)
+{
+    int term=1;
+    for (int n = start_n; n < end_n; ++n) 
+    {
+        int x_n = (term*r) > 0 ? (term*r) : 0;
+        term = x_n;
+        fprintf(file, "%d %d\n", n, x_n);
+    }
+    
+}
 
 int main() {
     FILE *file = fopen("data.txt", "w");
@@ -8,17 +19,7 @@ int main() {
         return 1;
     }
 
-    int a = 3;
-    int r= 3;
-    int start_n = 0;
-    int end_n = 4;
-    int term =1;
-    for (int n = start_n; n < end_n; ++n) {
-        int x_n = (term*r) > 0 ? (term*r) : 0;
-        term = x_n;
-        fprintf(file, "%d %d\n", n, x_n);
-    }
-
+    print(file, 3,3,0,4);
     fclose(file);
 
     return 0;
