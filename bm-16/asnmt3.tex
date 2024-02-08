@@ -54,13 +54,20 @@
 \bigskip
 \vspace{2cm}
 \textbf{Question: }
-For the circuit given below, choose the angular frequency $ \omega_0$ at which voltage across capacitor has maximum amplitude?\\\\
+For the circuit given below, choose the angular frequency $ \omega_0$ at which voltage across capacitor has maximum amplitude?
 \begin{figure}[h!]
     \includegraphics[width = \columnwidth]{figs/c_fig1.pdf}
     \caption{circuit }
     \centering
     \label{fig: bm_16_fig_1}
-\end{figure}
+\end{figure}\\
+\begin{enumerate}
+    \item[(A)] 1000\\
+    \item[(B)] 100\\
+    \item[(C)] 1\\
+    \item[(D)] 0   
+\end{enumerate}
+\hfill(GATE BM 2023)\\
 \textbf{Solution}:\\
 \begin{table}[htbp] 
 \centering
@@ -68,15 +75,11 @@ For the circuit given below, choose the angular frequency $ \omega_0$ at which v
 \caption{input values}
 \label{tab: table-bm16}
 \end{table}
-Writing differential equation for circuit,
-\begin{align}
-v_i\brak{t} &= 10^{-1}\frac{dv_c\brak{t}}{dt} + v_c\brak{t}
-\end{align}
 Writing in s-domain (Laplace transform)
 \begin{align}
-\mathcal{L}[v_i\brak{t}] &= \mathcal{L}[10^{-1}\frac{dv_c\brak{t}}{dt}] + \mathcal{L}[v_c\brak{t}]\\
-\implies V_i\brak{s} &= s10^{-1}V_c\brak{s} + V_c\brak{s}\\
-\therefore V_c\brak{s} &= \frac{1000s}{\brak{s^2+ \omega_o^2}}\frac{1}{(s+10)}
+V_i\brak{s} &= sRCV_c\brak{s} + V_c\brak{s}\\
+\implies V_c\brak{s}&=\frac{V_i\brak{s}\frac{1}{RC}}{\frac{1}{RC}+s}\\
+\therefore V_c\brak{s} &= \frac{V_os\frac{1}{RC}}{\brak{s^2+ \omega_o^2}}\frac{1}{(s+\frac{1}{RC})}
 \end{align}
 \begin{figure}[h!]
     \includegraphics[width = \columnwidth]{figs/c_fig2.pdf}
@@ -86,16 +89,19 @@ Writing in s-domain (Laplace transform)
 \end{figure}
 splitting $ V_c\brak{s}$ into partial fractions,
 \begin{align}
-V_c\brak{s} &= \frac{10^4s+10^3\omega_o^2}{\brak{10^2+\omega_o^2}\brak{s^2+\omega_o^2}}-\frac{10^4}{\brak{s+10}\brak{10^2+\omega^2}}
+V_c\brak{s} &= \frac{V_os + V_oRC\omega_o^2}{\brak{1+\brak{\omega_oRC}^2}\brak{s^2+\omega_o^2}}-\frac{V_o}{\brak{1+\brak{\omega_oRC}^2}\brak{s+\frac{1}{RC}}}
 \end{align}
 on applying inverse Laplace transform,
 \begin{align}
-V_c\brak{t}&= \frac{10^4\text{cos}(\omega_o t)}{10^2+\omega_o^2}+\frac{10^3\omega_o \text{sin}(\omega_o t)}{10^2+\omega_o^2}-\frac{10^4e^{-10t}}{10^2+\omega_o^2}
+v_c\brak{t}&= \frac{V_o\text{cos}\brak{\omega_o t}^2}{1+\brak{\omega_oRC}^2}+\frac{V_oRC\omega_o^2\text{sin}\brak{\omega_o t}}{1+\brak{\omega_oRC}^2}+\frac{V_oe^{\frac{-t}{RC}}}{1+\brak{\omega_oRC}^2}
 \end{align}
-
-\vspace{5cm}
+\vspace{3cm}
 The last term is natural response, we can ignore it.\\
 Now, the amplitude can be computed by,
+\begin{align}
+|v_c\brak{t}| &= \frac{V_o}{\sqrt{1+\brak{\omega_oRC}^2}}
+\end{align}
+from values in \tabref{tab: table-bm16}
 \begin{align}
 |v_c\brak{t}| &= \frac{10^3}{\sqrt{10^2+\omega_o^2}}
 \end{align}
