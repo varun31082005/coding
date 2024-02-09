@@ -87,13 +87,13 @@ V_i\brak{s} &= sRCV_c\brak{s} + V_c\brak{s}\\
     \centering
     \label{fig: bm_16_fig_2}
 \end{figure}
-splitting $ V_c\brak{s}$ into partial fractions,
+Splitting $ V_c\brak{s}$ into partial fractions,
 \begin{align}
 V_c\brak{s} &= \frac{V_os + V_oRC\omega_o^2}{\brak{1+\brak{\omega_oRC}^2}\brak{s^2+\omega_o^2}}-\frac{V_o}{\brak{1+\brak{\omega_oRC}^2}\brak{s+\frac{1}{RC}}}
 \end{align}
-on applying inverse Laplace transform,
+On applying inverse Laplace transform,
 \begin{align}
-v_c\brak{t}&= \frac{V_o\text{cos}\brak{\omega_o t}^2}{1+\brak{\omega_oRC}^2}+\frac{V_oRC\omega_o^2\text{sin}\brak{\omega_o t}}{1+\brak{\omega_oRC}^2}+\frac{V_oe^{\frac{-t}{RC}}}{1+\brak{\omega_oRC}^2}
+v_c\brak{t}&= \frac{V_o\cos{\brak{\omega_o t}}}{1+\brak{\omega_oRC}^2}+\frac{V_oRC\omega_o^2\sin{\brak{\omega_o t}}}{1+\brak{\omega_oRC}^2}+\frac{V_oe^{\frac{-t}{RC}}}{1+\brak{\omega_oRC}^2}
 \end{align}
 \vspace{3cm}
 The last term is natural response, we can ignore it.\\
@@ -101,9 +101,9 @@ Now, the amplitude can be computed by,
 \begin{align}
 |v_c\brak{t}| &= \frac{V_o}{\sqrt{1+\brak{\omega_oRC}^2}}
 \end{align}
-from values in \tabref{tab: table-bm16}
+From values in \tabref{tab: table-bm16}
 \begin{align}
 |v_c\brak{t}| &= \frac{10^3}{\sqrt{10^2+\omega_o^2}}
 \end{align}
-we can see the highest amplitude is obtained when $ \omega_o = 0$.
+We can see the highest amplitude is obtained when $ \omega_o = 0$.
 \end{document}
