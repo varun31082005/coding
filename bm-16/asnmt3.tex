@@ -69,7 +69,7 @@ For the circuit given below, choose the angular frequency $ \omega_0$ at which v
 \end{enumerate}
 \hfill(GATE BM 2023 question 16)\\
 \textbf{Solution}:\\
-\begin{table}[htbp] 
+\begin{table}[h!] 
 \centering
 \input{tables/table1}
 \caption{input values}
@@ -79,13 +79,22 @@ For the circuit given below, choose the angular frequency $ \omega_0$ at which v
 \begin{align}
 V_c\brak{s}&= \frac{V_1\brak{s}\frac{1}{sC}}{R+\frac{1}{sC}}\\
 \implies H\brak{s} &= \frac{1}{1+ sRC}\\
-\therefore H\brak{j\omega} &= \frac{1}{1+j\omega RC} 
+\implies H\brak{j\omega} &= \frac{1}{1+j\omega RC}\\
+|H\brak{j\omega}| &= \frac{1}{\sqrt{1+\brak{\omega RC}^2}}
 \end{align}
+\begin{figure}[h!]
+    \includegraphics[width = \columnwidth]{figs/Figure_1.png}
+    \caption{$ |H\brak(j\omega)|$ }
+    \centering
+    \label{fig: bm_16_fig_2}
+\end{figure}
+
+
 \begin{figure}[h!]
     \includegraphics[width = \columnwidth]{figs/c_fig2.pdf}
     \caption{circuit in $ \omega$-domain }
     \centering
-    \label{fig: bm_16_fig_2}
+    \label{fig: bm_16_fig_3}
 \end{figure}
 
 \begin{align}
