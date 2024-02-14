@@ -59,5 +59,35 @@ freedom system. If the total damping in the system is set as 188.5 N-s/m, such
 that the oscillation just ceases to occur, then the natural period of the system is
 \rule{1cm}{0.15mm} s (round off to one decimal place)
 \hfill(GATE MN 2023 question 63)\\
+
+\textbf{Solution}:\\
+\begin{table}[h!] 
+\centering
+\input{tables/table1}
+\caption{input values}
+\label{tab: table-bm16}
+\end{table}
+
+The differential equation of the system is:
+\begin{align}
+\frac{d^2x\brak{t}}{dt^2} + \lambda \frac{dx\brak{t}}{dt} + \omega_0^2 x\brak{t} &= 0
+\end{align}
+Taking laplace transform:
+\begin{align}
+s^2X\brak{s} + \lambda s X\brak{s} + \omega_o^2 X\brak{s}&=0\\
+\implies s^2 + s\lambda + \omega_o^2 &=0\\
+\therefore s = \frac{-\lambda \pm \sqrt{\lambda^2 - 4\omega_o^2}}{2}
+%s^2X\brak{s} + \lambda s X\brak{s} + \omega_o^2 X\brak{s}&=F\brak{s}\\
+%\implies H\brak{s}&=\frac{1}{s^2 + s\lambda + \omega_o^2}\\
+%\implies s = 
+\end{align}
+Where $ \sqrt{\lambda^2 - 4\omega_o^2}$ is $ \omega_d$.\\
+Given,
+\begin{align}
+\omega_d &=0\\
+\implies \lambda &= 2\omega_o\\
+\therefore \omega_o &\approx \pi
+\end{align}
+So, natural time period is $ 2$ seconds.
 \end{document}
 
