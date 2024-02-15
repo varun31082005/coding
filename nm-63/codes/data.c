@@ -1,43 +1,73 @@
-#include<stdio.h>
-#include<math.h>
-//linspace function
-double* linspace(double start, double end, int number_of_divisions);
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-double *return_sine(double *array, double omega);
-//sine function
+//linspace function in c;
+double* linspace(double start, double end, int number_of_values);
 
+//sine function for an array of values;
+double* sine_for_array(double *array, int length, double omega);
+
+//double exponential for an array of values;
+double* exponential_for_array(double *array, int length);
 int main()
 {
-    double* x_t;
-    double t_start = 0;
-    double t_end = 50;
-    int number_of_divs = 100;
-    double omega = ;
-    double* t_values = linspace(t_start,t_end,number_of_divs);
+    double start = 0;
+    double end = 1;
+    int number_of_values = 50;
+    double omega = M_PI;
+    double *t_values = linspace(start, end, number_of_values);
+    double *x_o_t = sine_for_array(t_values, number_of_values, omega);
+    double *x_t = exponential_for_array(t_values, number_of_values);
+
+    FILE *file = fopen("data.txt", "w");
+
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    for (int i = 0; i < number_of_values; i++)
+    {
+        fprintf(file,"%lf %lf %lf\n", *(t_values + i), *(x_o_t + i), *(x_t+i));
+    }
     
-    double* x_o_t = return_sine()
+    fclose(file);
     return 0;
-
 }
 
-double* linspace(double start, double end, int number_of_divisions)
+double *linspace(double start, double end, int number_of_values)
 {
-    double difference = 1/number_of_divisions;
-    double array[number_of_divisions];
-    for(int i =0;i<number_of_divisions+1;i++)
+    double difference = (end-start) / number_of_values;
+    double *output = (double *)malloc(number_of_values * sizeof(double));
+
+    for (int i = 0; i < number_of_values; i++)
     {
-        *(array+i) = start + i*difference;
+        *(output+i) = start + i * difference;
     }
-    return array;
+
+    return output;
 }
 
-double* return_sine(double *array, double omega)
+double* sine_for_array(double *array, int length, double omega)
 {
-    int length = sizeof(array)/sizeof(*array);
-    double output[length];
-    for(int i=0;i<length;i++)
+    double *output = (double *)malloc(length * sizeof(double));
+
+    for (int i = 0; i < length; i++)
     {
-        *(output+i) = sin(*(array+i)*omega);
+        *(output+i) = 100*cos(*(array+i) * omega);
     }
+
+    return output;
+}
+
+double* exponential_for_array(double *array, int length)
+{
+    double *output = (double *)malloc(length * sizeof(double));
+    for (int i = 0; i < length; i++)
+    {
+        *(output+i) = 100*(*(array+i)*exp(-i*M_PI)*(1-M_PI)+exp(-i*M_PI));
+    }
+
     return output;
 }

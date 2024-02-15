@@ -70,19 +70,19 @@ that the oscillation just ceases to occur, then the natural period of the system
 
 The differential equation of the system is:
 \begin{align}
-\frac{d^2x\brak{t}}{dt^2} + \lambda \frac{dx\brak{t}}{dt} + \omega_0^2 x\brak{t} &= 0
+m\frac{d^2x\brak{t}}{dt^2} + \lambda \frac{dx\brak{t}}{dt} + m\omega_0^2 x\brak{t} &= 0
 \end{align}
 Taking laplace transform:
 \begin{align}
-s^2X\brak{s} + \lambda s X\brak{s} + \omega_o^2 X\brak{s}&=0\\
-\implies s^2 + s\lambda + \omega_o^2 &=0\\
-\therefore s = \frac{-\lambda \pm \sqrt{\lambda^2 - 4\omega_o^2}}{2}
+ms^2X\brak{s} + \lambda s X\brak{s} + m\omega_o^2 X\brak{s}&=0\\
+\implies ms^2 + s\lambda + m\omega_o^2 &=0\\
+\therefore s = \frac{-\lambda \pm \sqrt{\lambda^2 - 4 m^2 \omega_o^2}}{2m}
 \end{align}
-where $ \sqrt{\lambda^2 - 4\omega_o^2}$ is $ \omega_d$.\\
+where $ \sqrt{\lambda^2 - 4 m^2 \omega_o^2}$ is $ \omega_d$.\\
 From \tabref{tab: Table mn63},
 \begin{align}
 \omega_d &=0\\
-\implies \lambda &= 2\omega_o\\
+\implies \lambda &= 2\omega_o m\\
 \implies \omega_o &\approx \pi\\
  T_i &= \frac{2\pi}{\omega_o}\\
  \therefore t_i = 2\text{ seconds}
@@ -103,5 +103,11 @@ Taking inverse laplace transform by method of partial fractions,
 X\brak{s} &= \frac{1}{s+\pi} + \frac{1-\pi}{\brak{s+\pi}^2}\\
 \therefore x\brak{t} &= \brak{1+ \brak{1-\pi}t}e^{-\pi}
 \end{align}
+\begin{figure}[h!]
+    \includegraphics[width = \columnwidth]{figs/Figure_1.png}
+    \caption{$ x\brak{t}$ with and with out damping }
+    \centering
+    \label{fig: nm_63_fig_3}
+\end{figure}
 \end{document}
 
