@@ -77,9 +77,6 @@ Taking laplace transform:
 s^2X\brak{s} + \lambda s X\brak{s} + \omega_o^2 X\brak{s}&=0\\
 \implies s^2 + s\lambda + \omega_o^2 &=0\\
 \therefore s = \frac{-\lambda \pm \sqrt{\lambda^2 - 4\omega_o^2}}{2}
-%s^2X\brak{s} + \lambda s X\brak{s} + \omega_o^2 X\brak{s}&=F\brak{s}\\
-%\implies H\brak{s}&=\frac{1}{s^2 + s\lambda + \omega_o^2}\\
-%\implies s = 
 \end{align}
 where $ \sqrt{\lambda^2 - 4\omega_o^2}$ is $ \omega_d$.\\
 From \tabref{tab: Table mn63},
@@ -87,8 +84,24 @@ From \tabref{tab: Table mn63},
 \omega_d &=0\\
 \implies \lambda &= 2\omega_o\\
 \implies \omega_o &\approx \pi\\
- T_i &= \frac{2\pi}{\omega_o}
- \therefore t_i = 2\text{seconds}
+ T_i &= \frac{2\pi}{\omega_o}\\
+ \therefore t_i = 2\text{ seconds}
+\end{align}
+To find x\brak{t}, we assume the initial amplitude of oscillations to be 1 meter and it is situated at extreme position.
+\begin{align}
+s^2X\brak{s} + \lambda s X\brak{s} + \omega_o^2 X\brak{s}&=sx\brak{0}+x\brak{0}\\
+\implies X\brak{s}&=\frac{1+s}{s^2 + s\lambda + \omega_o^2}
+\end{align}
+substituting values from \tabref{tab: Table mn63} and $\omega_o$,
+\begin{align}
+X\brak{s} &= \frac{1+s}{\brak{s+\pi}^2}
+\end{align}
+\vspace{3cm}
+
+Taking inverse laplace transform by method of partial fractions,
+\begin{align}
+X\brak{s} &= \frac{1}{s+\pi} + \frac{1-\pi}{\brak{s+\pi}^2}\\
+\therefore x\brak{t} &= \brak{1+ \brak{1-\pi}t}e^{-\pi}
 \end{align}
 \end{document}
 
