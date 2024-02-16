@@ -13,8 +13,8 @@ double* exponential_for_array(double *array, int length);
 int main()
 {
     double start = 0;
-    double end = 1;
-    int number_of_values = 50;
+    double end = 0.6;
+    int number_of_values = 1000;
     double omega = M_PI;
     double *t_values = linspace(start, end, number_of_values);
     double *x_o_t = sine_for_array(t_values, number_of_values, omega);
