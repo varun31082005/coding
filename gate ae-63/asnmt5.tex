@@ -61,7 +61,7 @@ Let $ \omega_1$ and $ \omega_2$ be the natural frequencies of mode I and mode II
 The value of $ \frac{\omega_2}{\omega_1}$ is \rule{1cm}{0.15mm} (rounded off to one decimal place).
 \hfill(GATE AE 2022 QUESTION 63)\\
 \begin{figure}[h!]
-    \includegraphics[width = \columnwidth]{figs/fig_qn.png}
+    \includegraphics[width = \columnwidth]{figs/qn_fig.pdf}
     \caption{Figure given in question }
     \centering
     \label{fig: nm_63_fig_1}
@@ -81,12 +81,12 @@ The value of $ \frac{\omega_2}{\omega_1}$ is \rule{1cm}{0.15mm} (rounded off to 
     \end{align}
     Assuming the bar is at mean position and has non-zero intitial velocity, we can write it's laplace transform as:
     \begin{align}
-        s^2mX\brak{s}-v\brak{0}+ 2kX\brak{s}&=0\\
-        \implies X\brak{s} &= \frac{\frac{v\brak{0}}{m}}{s^2 + \frac{2k}{m}}
+        s^2mX\brak{s}-mv\brak{0}+ 2kX\brak{s}&=0\\
+        \implies X\brak{s} &= \frac{v\brak{0}}{s^2 + \frac{2k}{m}}
     \end{align}
     On taking inverse laplace transform we get,
     \begin{align}
-        x\brak{t} &= v\brak{0}\sqrt{\frac{1}{2mk}}\sin{\sqrt{\frac{2k}{m}}t}\\
+        x\brak{t} &= v\brak{0}\sqrt{\frac{m}{2k}}\sin{\sqrt{\frac{2k}{m}}t}\\
         \therefore \omega_1 &= \sqrt{\frac{2k}{m}} \label{eq:gate63_1}
     \end{align}
 
@@ -103,23 +103,22 @@ The value of $ \frac{\omega_2}{\omega_1}$ is \rule{1cm}{0.15mm} (rounded off to 
     \centering
     \label{fig: nm_63_fig_3}
 \end{figure}
-    \item [\textbf{ii:}] For torsional strain from \figref{fig: nm_63_fig_3},: 
-\begin{align}
-    I\alpha\brak{t}\brak{t}&= k\brak{x-\frac{L\theta\brak{t}}{2}}\frac{L}{2}-k\brak{x+\frac{L\theta\brak{t}}{2}}\frac{L}{2}\\
-    I\alpha\brak{t}&=-\frac{kL^2\theta\brak{t}}{2}
-\end{align}
-Assuming it is at mean position and having no zero angular velocity
+    \item [\textbf{ii:}] For torsional strain from \figref{fig: nm_63_fig_3},
+    \begin{align}
+        I\alpha\brak{t}&=-\frac{kL^2\theta\brak{t}}{2}
+    \end{align}
+Assuming it is at mean position and having non-zero angular velocity
 we can write it's laplace transform as:
     \begin{align}
-        s^2I\Theta\brak{s}-\omega_o+ \frac{kL^2\theta\brak{t}\brak{s}}{2}&=0
+        s^2I\Theta\brak{s}-I\omega_o+ \frac{kL^2\Theta\brak{s}}{2}&=0
     \end{align}
     substituting values from \tabref{tab: Table ae63}:
     \begin{align}
-        \Theta\brak{s}&=\frac{\frac{12\omega_o}{m}}{s^2+\frac{6k}{m}}
+        \Theta\brak{s}&=\frac{\omega_o}{s^2+\frac{6k}{m}}
     \end{align}
     On taking inverse laplace transform we get,
     \begin{align}
-        \theta\brak{t} &= \omega_o\sqrt{\frac{24}{mk}}\cos{\sqrt{\frac{6k}{m}}t}\\
+        \theta\brak{t} &= \omega_o\sqrt{\frac{m}{6k}}\sin{\sqrt{\frac{6k}{m}}t}\\
         \therefore \omega_2 &= \sqrt{\frac{6k}{m}} \label{eq:gate63_2}
     \end{align}
 From \eqref{eq:gate63_1} and \eqref{eq:gate63_2} we see that
