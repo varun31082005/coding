@@ -78,22 +78,44 @@ a_n=
 \caption{input values}
 \label{tab: Table2022cs36}
 \end{table}
-For any given sequence $ \bigl\{ s_n \bigl\}$ generating function is defined as:
-\begin{align}
-G\brak{S;z^{-1}} &= \sum_{n=0}^{\infty}s_n z^{-n}
-\end{align}
 For the given sequence:
 \begin{align}
-G\brak{A;z^{-1}} &= \sum_{k=-\infty}^{\infty} u\brak{2k} z^{-2k}+ \sum_{k=-\infty}^{\infty} \brak{\brak{2k+2}u\brak{2k+1}} z^{-\brak{2k+1}}\\
-\implies G\brak{A;z^{-1}} &= \brak{1+z^{-2}+z^{-4} + \dots} + \brak{2z^{-1}+4z^{-3} + 6z^{-5} + \dots}\\
-\implies G\brak{A;z^{-1}} &= \frac{1}{1-z^{-2}} + \brak{2z^{-1}+4z^{-3}+6z^{-5} \dots}\\
-\implies G\brak{A;z^{-1}} &= \frac{1}{1-z^{-2}} +2z^{-1}\brak{\frac{1}{1-z^{-2}}+\frac{z^{-2}}{\brak{1-z^{-2}}^2}}
+X\brak{z} &= \sum_{k=-\infty}^{\infty} u\brak{2k} z^{-2k}+ \sum_{k=-\infty}^{\infty} \brak{\brak{2k+2}u\brak{2k+1}} z^{-\brak{2k+1}}\\
+\implies X\brak{z} &= \brak{1+z^{-2}+z^{-4} + \dots} + \brak{2z^{-1}+4z^{-3} + 6z^{-5} + \dots}\\
+\implies X\brak{z} &= \frac{1}{1-z^{-2}} + \brak{2z^{-1}+4z^{-3}+6z^{-5} \dots}\\
+\implies X\brak{z} &= \frac{1}{1-z^{-2}} +2z^{-1}\brak{\frac{1}{1-z^{-2}}+\frac{z^{-2}}{\brak{1-z^{-2}}^2}}
 \end{align}
 \begin{align}
-\therefore G\brak{A;z^{-1}} &= \frac{1}{1-z^{-1}} + \frac{z^{-1}\brak{1+z^{-2}}}{\brak{1-z^{-2}}^2}\label{eq: 22cs36_1}
+\therefore X\brak{z} &= \frac{1}{1-z^{-1}} + \frac{z^{-1}\brak{1+z^{-2}}}{\brak{1-z^{-2}}^2}\label{eq: 22cs36_1}
 \end{align}
 \eqref{eq: 22cs36_1} is the closed form of generating function required in the question.\\
-Hence, option \brak{A} is correct.
-Taking it into partial fractions
+Hence, option (A) is correct.\\\\
+\begin{align}
+X\brak{z}&=X_1\brak{z}+X_2\brak{z}\\
+X_1\brak{z}&=\frac{1}{1-z^{-1}}\\
+\implies x_1\brak{n} &= \frac{1}{1-z^{-1}}\\
+\implies a_n&=  x_1\brak{n}+ x_2\brak{n}
+\end{align}
+To find inverse z-transform of $ X_2\brak{z}$ we use contour integration technique:
+\begin{align}
+    x_2\brak{n}&=\frac{1}{2\pi j}\oint_{C}x_2\brak{A;z^{-1}} \;z^{n-1} \;dz  \\
+    &=\frac{1}{2\pi j}\oint_{C}\frac{z^{n}\brak{z^2+1}}{\brak{z^2-1}^2} \;dz 
+\end{align}
+
+\newpage
+
+We can observe that we have two poles at \\$ z= 1,-1$. And poles are repeated twice, thus by applying residue theorem two times for poles 1 and -1:
+\begin{align}
+    x_2\brak{n}&=\frac{1}{\brak {1}!}\lim\limits_{z\to 1}\frac{d}{dz}\brak {{(z-1)}^{2}X_2\brak{z}} + \frac{1}{\brak {1}!}\lim\limits_{z\to -1}\frac{d}{dz}\brak {{(z+1)}^{2}X_2\brak{z}} \\
+\implies    x_2\brak{n} &=\lim\limits_{z\to 1}\frac{d}{dz}\brak {{(z-1)}^{2}\frac{z^n\brak{z^2+1}}{{(z^2-1)}^2}}+ \lim\limits_{z\to -1}\frac{d}{dz}\brak {{(z+1)}^{2}\frac{z^n\brak{z^2+1}}{{(z^2-1)}^2}}   \\
+\notag \implies x_2\brak{n} &= \lim\limits_{z\to 1}\frac{\brak{z+1}^2\brak{nz^{n-1}+ \brak{n+2}z^{n+1}}-2z^n\brak{1+z^2}\brak{z+1}}{\brak{z+1}^4}\\
+    &+ \lim\limits_{z\to -1}\frac{\brak{z-1}^2\brak{nz^{n-1}+ \brak{n+2}z^{n+1}}-2z^n\brak{1+z^2}\brak{z-1}}{\brak{z-1}^4}
+\end{align}
+on simplification, we get
+\begin{align}
+x_2\brak{n} &= \frac{n+n\brak{-1}^{n-1}}{2}\\
+\therefore a_n &= u\brak{n} + \frac{n+n\brak{-1}^{n-1}}{2} u\brak{n}
+\end{align}
+Which is the sequence given in the Question.
 \end{document}
 
