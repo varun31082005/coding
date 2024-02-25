@@ -82,18 +82,18 @@ For the given sequence:
 \begin{align}
 X\brak{z} &= \sum_{k=-\infty}^{\infty} u\brak{2k} z^{-2k}+ \sum_{k=-\infty}^{\infty} \brak{\brak{2k+2}u\brak{2k+1}} z^{-\brak{2k+1}}\\
 \implies X\brak{z} &= \brak{1+z^{-2}+z^{-4} + \dots} + \brak{2z^{-1}+4z^{-3} + 6z^{-5} + \dots}\\
-\implies X\brak{z} &= \frac{1}{1-z^{-2}} + \brak{2z^{-1}+4z^{-3}+6z^{-5} \dots}\\
-\implies X\brak{z} &= \frac{1}{1-z^{-2}} +2z^{-1}\brak{\frac{1}{1-z^{-2}}+\frac{z^{-2}}{\brak{1-z^{-2}}^2}}
+\implies X\brak{z} &= \frac{1}{1-z^{-2}} + \brak{2z^{-1}+4z^{-3}+6z^{-5} \dots} \quad |z|>1\\
+\implies X\brak{z} &= \frac{1}{1-z^{-2}} +2z^{-1}\brak{\frac{1}{1-z^{-2}}+\frac{z^{-2}}{\brak{1-z^{-2}}^2}} \quad |z|>1
 \end{align}
 \begin{align}
-\therefore X\brak{z} &= \frac{1}{1-z^{-1}} + \frac{z^{-1}\brak{1+z^{-2}}}{\brak{1-z^{-2}}^2}\label{eq: 22cs36_1}
+\therefore X\brak{z} &= \frac{1}{1-z^{-1}} + \frac{z^{-1}\brak{1+z^{-2}}}{\brak{1-z^{-2}}^2} \quad |z|>1 \label{eq: 22cs36_1}
 \end{align}
 \eqref{eq: 22cs36_1} is the closed form of generating function required in the question.\\
 Hence, option (A) is correct.\\\\
 \begin{align}
 X\brak{z}&=X_1\brak{z}+X_2\brak{z}\\
-X_1\brak{z}&=\frac{1}{1-z^{-1}}\\
-\implies x_1\brak{n} &= \frac{1}{1-z^{-1}}\\
+X_1\brak{z}&=\frac{1}{1-z^{-1}} \quad |z|>1\\ 
+\implies x_1\brak{n} &= u\brak{n}\\
 \implies a_n&=  x_1\brak{n}+ x_2\brak{n}
 \end{align}
 To find inverse z-transform of $ X_2\brak{z}$ we use contour integration technique:
