@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.2)  1 MAR 2024 19:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.2)  4 MAR 2024 09:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1262,7 +1262,7 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 File: ts1txr.fd 2000/12/15 v3.1
 )
 (./tables/table1.tex
-Overfull \hbox (47.12231pt too wide) in paragraph at lines 1--34
+Overfull \hbox (43.22533pt too wide) in paragraph at lines 1--32
  [][] 
  []
 
@@ -1277,10 +1277,10 @@ Package pdftex.def Info: figs/qn_fig.png  used on input line 83.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 2150) has occurred while \output is active []
+Underfull \vbox (badness 5939) has occurred while \output is active []
 
 
-Overfull \hbox (14.22466pt too wide) detected at line 126
+Overfull \hbox (31.57008pt too wide) detected at line 127
 []
  []
 
@@ -1288,27 +1288,35 @@ Overfull \hbox (14.22466pt too wide) detected at line 126
 
 
  <./figs/qn_fig.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 142--146
+Overfull \hbox (56.12726pt too wide) detected at line 145
+[]
+ []
+
+
+Overfull \hbox (14.22466pt too wide) detected at line 175
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--155
+Underfull \hbox (badness 10000) in paragraph at lines 199--203
 
  []
 
-[2
-
-] (./asnmt9.aux)
+[2] (./asnmt9.aux)
 Package rerunfilecheck Info: File `asnmt9.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29599 strings out of 478287
- 583025 string characters out of 5849290
- 862906 words of memory out of 5000000
- 47120 multiletter control sequences out of 15000+600000
- 550156 words of font info for 204 fonts, out of 8000000 for 9000
+ 29607 strings out of 478287
+ 583100 string characters out of 5849290
+ 858908 words of memory out of 5000000
+ 47121 multiletter control sequences out of 15000+600000
+ 553445 words of font info for 209 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,16n,96p,410b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1321,10 +1329,10 @@ are/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on asnmt9.pdf (2 pages, 71505 bytes).
+Output written on asnmt9.pdf (2 pages, 73226 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 30 named destinations out of 1000 (max. 500000)
+ 116 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 33 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

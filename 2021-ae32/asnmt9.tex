@@ -100,18 +100,67 @@ m_1&0\\
 \frac{d^2x_1}{dt^2}\\
 \frac{d^2x_2}{dt^2}
 \end{pmatrix}
-&= \begin{bmatrix}
+&= -\begin{bmatrix}
 k_1+k_c&-k_c\\
 -k_c&k_2+k_c\end{bmatrix}
 \begin{pmatrix}
-x_1\\
-x_2
+x_1\brak{t}\\
+x_2\brak{t}
 \end{pmatrix} \label{eq: 2021_ae_32_1}
+\end{align}
+Taking laplace transform:
+\begin{align}
+\begin{bmatrix}
+m_1&0\\
+0&m_2\end{bmatrix}
+\begin{pmatrix}
+s^2 X_1\brak{s}-sx_1\brak{0}\\
+s^2 X_2\brak{s}-sx_2\brak{0}
+\end{pmatrix}
+&= -\begin{bmatrix}
+k_1+k_c&-k_c\\
+-k_c&k_2+k_c\end{bmatrix}
+\begin{pmatrix}
+X_1\brak{s}\\
+X_2\brak{s}
+\end{pmatrix}
+\end{align}
+
+\newpage
+\begin{align}
+\implies \begin{pmatrix}
+s^2 X_1\brak{s}-sx_1\brak{0}\\
+s^2 X_2\brak{s}-sx_2\brak{0}
+\end{pmatrix} &=-
+\begin{bmatrix}
+\frac{1}{m_1}&0\\
+0&\frac{1}{m_2}\end{bmatrix}
+\begin{bmatrix}
+k_1+k_c&-k_c\\
+-k_c&k_2+k_c\end{bmatrix}
+\begin{pmatrix}
+X_1\brak{s}\\
+X_2\brak{s}
+\end{pmatrix}
+\end{align}
+\begin{align}
+\implies  \begin{pmatrix}
+X_1\brak{s}\\
+X_2\brak{s}
+\end{pmatrix} &=
+\frac{\begin{bmatrix}
+s^2+\frac{k_1+k_c}{m_1}&\frac{-k_c}{m_1}\\
+\frac{-k_c}{m_2}&s^2+\frac{k_2+k_c}{m_2}\end{bmatrix}
+\begin{pmatrix}
+sx_1\brak{0}\\
+sx_2\brak{0}
+\end{pmatrix}}
+{\brak{s^2+\frac{k_1+k_c}{m_1}}\brak{s^2+\frac{k_c+k_2}{m_2}}-\frac{k_c^2}{m_1m_2}}
 \end{align}
 Assuming the solutions to the equations are:
 \begin{align}
-x_1\brak{t} &= A_1\sin{\brak{\omega t + \lambda}} \label{eq: 2021_ae_32_2}\\
-x_2\brak{t} &= A_2\sin{\brak{\omega t + \lambda}} \label{eq: 2021_ae_32_3}
+x_1\brak{t} &= A_1\cos{\brak{\omega t}} \label{eq: 2021_ae_32_2}\\
+x_2\brak{t} &= A_2\cos{\brak{\omega t}} \label{eq: 2021_ae_32_3}
 \end{align}
 Substituting \eqref{eq: 2021_ae_32_2} and \eqref{eq: 2021_ae_32_3} in \eqref{eq: 2021_ae_32_1}, we get:
 \begin{align}
@@ -129,25 +178,24 @@ A_2
 k_1+k_c- m_1\omega ^2&-k_c\\
 -k_c&k_2+k_c-m_2\omega ^2\end{bmatrix}} &=0 \label{eq: 2021_ae_32_5}
 \end{align}
-\newpage
 
 Let the roots of this equation be $ \omega_1$ and $ \omega_2$. Which are the two modes of the system.\\
 Substituting $ \omega_1$ in \eqref{eq: 2021_ae_32_1}:\\
 we obtain 
 \begin{align}
-\begin{pmatrix}
+ \vec{\phi_1}&= \begin{pmatrix}
 A_1\\
 A_2
-\end{pmatrix}_1 &= \phi_1
+\end{pmatrix}_1
 \end{align}
 and \\\\
 Substituting $ \omega_2$ in \eqref{eq: 2021_ae_32_1}:\\
 we obtain 
 \begin{align}
-\begin{pmatrix}
+ \vec{\phi_2}&=\begin{pmatrix}
 A_1\\
 A_2
-\end{pmatrix}_2 &= \phi_2
+\end{pmatrix}_2 
 \end{align}
 \\\\
 These are called mode shapes.\\
@@ -185,8 +233,8 @@ From \tabref{tab: Table2021_ae_32_1}:
         x_2\brak{0} &= A_{21}+ A_{22}
     \end{align}
     \begin{enumerate}
-        \item If $ \phi_1 \neq \phi_2$ solution always exists
-        \item If $ \phi_1 = \phi_2$ solution exists only if $ x_1\brak{0}=x_2\brak{0}$
+        \item If $ \vec{\phi_1} \neq \vec{\phi_2}$ solution always exists
+        \item If $ \vec{\phi_1} = \vec{\phi_2}$ solution exists only if $ x_1\brak{0}=x_2\brak{0}$
     \end{enumerate}
     So, option (C) is also correct.
 \end{enumerate}
