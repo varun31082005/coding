@@ -159,8 +159,8 @@ sx_2\brak{0}
 \end{align}
 Assuming the solutions to the equations are:
 \begin{align}
-x_1\brak{t} &= A_1\cos{\brak{\omega t}} \label{eq: 2021_ae_32_2}\\
-x_2\brak{t} &= A_2\cos{\brak{\omega t}} \label{eq: 2021_ae_32_3}
+x_1\brak{t} &= A_1\sin{\brak{\omega t+ \lambda}} \label{eq: 2021_ae_32_2}\\
+x_2\brak{t} &= A_2\sin{\brak{\omega t+ \lambda}} \label{eq: 2021_ae_32_3}
 \end{align}
 Substituting \eqref{eq: 2021_ae_32_2} and \eqref{eq: 2021_ae_32_3} in \eqref{eq: 2021_ae_32_1}, we get:
 \begin{align}
@@ -171,7 +171,7 @@ k_1+k_c- m_1\omega^2&-k_c\\
 A_1\\
 A_2
 \end{Bmatrix}
-\sin{\brak{\omega t+ \phi}} &=0\label{eq: 2021_ae_32_4}
+\sin{\brak{\omega t+ \lambda}} &=0\label{eq: 2021_ae_32_4}
 \end{align}
 \begin{align}
 \implies \det\brak{\begin{bmatrix}
@@ -199,6 +199,10 @@ A_2
 \end{align}
 \\\\
 These are called mode shapes.\\
+Since the initial velocities of both the masses are zero:
+\begin{align}
+\lambda = \frac{\pi}{2} \text{ rad}
+\end{align}
 So any oscillation can be represented as:
 \begin{align}
 \begin{pmatrix}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.2)  5 MAR 2024 14:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.2)  5 MAR 2024 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1262,7 +1262,7 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 File: ts1txr.fd 2000/12/15 v3.1
 )
 (./tables/table1.tex
-Overfull \hbox (43.22533pt too wide) in paragraph at lines 1--32
+Overfull \hbox (49.32735pt too wide) in paragraph at lines 1--34
  [][] 
  []
 
@@ -1277,7 +1277,7 @@ Package pdftex.def Info: figs/qn_fig.png  used on input line 83.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 5939) has occurred while \output is active []
+Underfull \vbox (badness 2150) has occurred while \output is active []
 
 
 Overfull \hbox (31.57008pt too wide) detected at line 127
@@ -1293,7 +1293,7 @@ Overfull \hbox (56.12726pt too wide) detected at line 145
  []
 
 
-Overfull \hbox (14.22466pt too wide) detected at line 175
+Overfull \hbox (13.98465pt too wide) detected at line 175
 []
  []
 
@@ -1312,9 +1312,9 @@ Package rerunfilecheck Info: File `asnmt9.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29606 strings out of 478287
- 583087 string characters out of 5849290
- 857908 words of memory out of 5000000
+ 29607 strings out of 478287
+ 583100 string characters out of 5849290
+ 858908 words of memory out of 5000000
  47121 multiletter control sequences out of 15000+600000
  553445 words of font info for 209 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1329,10 +1329,10 @@ are/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on asnmt9.pdf (2 pages, 72760 bytes).
+Output written on asnmt9.pdf (2 pages, 73588 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
- 32 named destinations out of 1000 (max. 500000)
+ 116 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 33 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
