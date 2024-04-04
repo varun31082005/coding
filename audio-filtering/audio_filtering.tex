@@ -63,7 +63,7 @@
 \label{input_sound}
 \item The sound file used for this code is obtained from the below link
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/blob/main/Audio_%20Filter/codes/Dhanush-Singing.wav
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/varun_singing.wav
 \end{lstlisting}
 \item 
 \label{Python code}
@@ -107,11 +107,11 @@ y(n) = 0, n < 0 \label{prob:2.2}
 Sketch $y(n)$.\\
 Solve\\
 \solution  The C code calculates $y\brak{n}$ and generates values in a text file.\begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/2.2.c
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/2.2.c
 \end{lstlisting} 
 The following code plots \eqref{prob:2.1} and \eqref{prob:2.2}
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/2.2.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/2.2.py
 \end{lstlisting}
 \begin{figure}[H]
 	\centering
@@ -226,7 +226,7 @@ known as the {\em Discret Time Fourier Transform} (DTFT) of $x(n)$.
 \\
 \solution The following code plots the magnitude of transfer function.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/3.5.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/3.5.py
 \end{lstlisting}
 Substituting $z = e^{j \omega}$ in \eqref{eq:freq_resp}, we get
 \begin{align}
@@ -265,7 +265,7 @@ using \eqref{eq:anun} and \eqref{eq:z_trans_shift}.
 \\
 \solution The following code plots $h\brak{n}$ 
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/4.2.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/4.2.py
 \end{lstlisting}
 %
 \begin{figure}[H]
@@ -307,7 +307,7 @@ Definition of $h\brak{n}$: The output of the system when $\delta\brak{n}$ is giv
 The following code plots Fig. \ref{fig:hndef}. Note that this is the same as Fig. 
 \ref{fig:hn}. 
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/4.2.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/4.4.py
 \end{lstlisting}
 \begin{figure}[!ht]
 \centering
@@ -331,7 +331,7 @@ Comment. The operation in \eqref{eq:convolution} is known as
 $y(n)$ in  Fig. 
 \ref{fig:xnyn}. 
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/4.5.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/4.5.py
 \end{lstlisting}
 \begin{figure}[H]
 \centering
@@ -382,7 +382,7 @@ https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/5_sol.
 \item Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and IFFT.
 \solution The solution of this question can be found in the code below.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/5.4.py 
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/5.4.py 
 \end{lstlisting}
 \begin{figure}[H]
 \centering
@@ -427,7 +427,7 @@ Thus we can rewrite  \eqref{eq:fp} as:
 \end{enumerate}
 The below code computes $y\brak{n}$ by DFT Matrix and then plots it.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/5.5.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/5.5.py
 \end{lstlisting}
 \begin{figure}[H]
 \centering
@@ -459,7 +459,7 @@ where the input signal is $x(n)$ and the output signal is $y(n)$ with initial va
 
 \solution The below code gives the output of an Audio Filter without using the built in function signal.lfilter.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/6.1.py 
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/6.1.py
 \end{lstlisting}
 \begin{figure}[H]
 \centering
@@ -510,7 +510,7 @@ h(n) &= \sum_{i}r(i)[p(i)]^nu(n) + \sum_{j}k(j)\delta(n - j)
 \end{align}
 The below code computes the values of $r\brak{i},p\brak{i} , k\brak{i}$ and plots $h\brak{n}$
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/6.2.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/6.2.py
 \end{lstlisting}
 \input{tables/table1}
 
@@ -523,7 +523,7 @@ H(1)&= \sum_{n = 0}^{\infty}h(n)  = \frac{\sum_{k = 0}^{N}b(k)}{\sum_{k = 0}^{M}
 As both $a\brak{k}$ and $b\brak{k}$ are finite length sequences they converge.\\
 The below code plots Filter frequency response.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/6_filter_response.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/6_filter_response.py
 \end{lstlisting}
 \begin{figure}[H]
 \centering
@@ -533,7 +533,7 @@ https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/6_filt
 \end{figure}
 The below code plots the Butterworth Filter in analog domain by using bilinear transform.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/analog_filt.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/analog_filter.py
 \end{lstlisting}
 \begin{align}
     z=\frac{1+sT/2}{1-sT/2}
@@ -548,7 +548,7 @@ https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/analog
 
 The below code plots the Pole-Zero Plot of the frequency response.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/6.2_pole-zero.py
+https://github.com/varun31082005/ee1205/blob/master/audio-filtering/codes/6.2_poles.py
 \end{lstlisting}
 \begin{figure}[H]
 \centering
