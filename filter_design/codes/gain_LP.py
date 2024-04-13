@@ -1,11 +1,11 @@
 import numpy as np
 
 # Given parameters
-s1 = -0.1907 - 1.0322j
-s2 = -0.4604 - 0.4276j
-s3 = -0.4604 + 0.4276j
-s4 = -0.1907 + 1.0322j
-epsilon = 0.3
+s1 = -0.3913 - 0.4156j
+s2 = -0.3913 + 0.4156j
+s3 = -0.1621 + 1.0033j
+s4 = -0.1621 + -1.0033j
+epsilon = 0.4
 Omega_Lp = 1
 
 # Generate the denominator polynomial

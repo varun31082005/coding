@@ -6,7 +6,8 @@ from sympy import symbols, exp, I
 s, s_L, z, omega = symbols('s s_L z omega')
 
 # Given transfer function
-H_s_L = 0.4166 / (s_L**4 + 1.3022*s_L**3 + 1.84781*s_L**2 + 1.1651*s_L + 0.4350)
+H_s_L = 0.3125218/(1.0*s_L**4 + 1.1068*s_L**3 + 1.61244527*s_L**2 + 0.91397462099*s_L + 0.336555016589065)
+
 
 Omega_0_val = 0.3519
 B_val = 0.0884
