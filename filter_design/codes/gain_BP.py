@@ -14,12 +14,11 @@ den = np.poly([s1, s2, s3, s4])
 # Define frequency range
 w = np.arange(-2, 2.01, 0.01)
 
-num = 0.3125
+num = 0.3125218
 
 # Define parameters for transformation
 B = 0.0884
 Omega0 = 0.3519
-
 # Perform transformation to get s_L
 s_L = (1j * 0.3105)**2 + Omega0**2
 s_L /= B * (1j * 0.3105)
