@@ -17,7 +17,7 @@ w = np.arange(-2, 2.01, 0.01)
 num = 0.3125
 
 # Define parameters for transformation
-B = 0.1107
+B = 0.0884
 Omega0 = 0.3519
 
 # Perform transformation to get s_L
